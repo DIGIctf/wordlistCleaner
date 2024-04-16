@@ -1,0 +1,10 @@
+Instructions
+$ python3 wordlistCleaner.py <list.txt>
+
+This will do the following:
+-remove letter accents and replace with english letter. i.e will replace â with a
+-remove spaces
+-convert upper to lower
+-remove duplicate lines
+
+This will then save the output file to list-clean.txt
