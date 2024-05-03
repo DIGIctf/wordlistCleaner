@@ -1,4 +1,4 @@
-Instructions
+# Instructions
 $ python3 wlc.py <list.txt>
 
 This will do the following:
