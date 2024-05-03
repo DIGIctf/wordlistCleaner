@@ -1,5 +1,9 @@
 # Instructions
 $ python3 wlc.py <list.txt>
+<cod>```
+$ python3 wlc.py <list.txt>
+```
+</code>
 
 This will do the following:
 -remove letter accents and replace with english letter. i.e will replace â with a
