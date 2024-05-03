@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#Created by @digijeff 2024
 import sys
 import unicodedata
 import os
@@ -114,6 +113,7 @@ def main(input_file):
     # Remove tmp_cleaned_output_part2.txt
     if os.path.exists('tmp_cleaned_output_part2.txt'):
         os.remove('tmp_cleaned_output_part2.txt')
+        
 
     # Copy tmp_cleaned_output.txt to wordlist_cleaned_00001.txt
     output_file_name = 'wordlist_cleaned_00001.txt'
@@ -123,11 +123,18 @@ def main(input_file):
         output_file_name = f'wordlist_cleaned_{file_count:05d}.txt'
 
     shutil.copyfile('tmp_cleaned_output.txt', output_file_name)
+    
+    # Remove tmp_cleaned_output.txt
+    if os.path.exists('tmp_cleaned_output.txt'):
+        os.remove('tmp_cleaned_output.txt')
+    
+    
     # Print the name of the output file
     print("Wordlist cleaned: ", output_file_name)
-    with open(output_file_name, 'r', encoding='utf-8') as f:
-        print("Contents of the output file:")
-        print(f.read())
+    #used for testing to output the results from the file
+    #with open(output_file_name, 'r', encoding='utf-8') as f:
+    #    print("Contents of the output file:")
+    #    print(f.read())
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
